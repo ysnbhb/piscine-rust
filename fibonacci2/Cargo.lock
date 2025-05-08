@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "find_fibonacci2"
+name = "fibonacci2"
 version = "0.1.0"

@@ -1,8 +1,8 @@
-pub fn add(left: u8, right: u8) -> u8 {
+pub fn sum(left: u8, right: u8) -> u8 {
     left + right
 }
 
-pub fn deff(left: i16, right: i16) -> i16 {
+pub fn diff(left: i16, right: i16) -> i16 {
     left - right
 }
 

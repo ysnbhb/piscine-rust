@@ -9,7 +9,7 @@ pub fn nbr_function(c: i32) -> (i32, f64, f64) {
 pub fn str_function(a: String) -> (String, String) {
     let mut res = String::new();
     for i in a.split(" ") {
-        let num = i.parse::<f32>().unwrap().exp();
+        let num = i.parse::<f64>().unwrap().exp();
         res.push_str(&num.to_string());
         res.push(' ');
     }

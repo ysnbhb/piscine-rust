@@ -35,7 +35,7 @@ pub struct Point(pub f64, pub f64);
 
 impl Point {
     pub fn distance(&self , p : Point)-> f64{
-        let num = (self.1 - p.1).powf(2.0) + (self.1 - p.1).powf(2.0);
+        let num = (self.0 - p.0).powf(2.0) + (self.1 - p.1).powf(2.0);
         num.sqrt()
     }
 }

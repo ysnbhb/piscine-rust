@@ -1,4 +1,7 @@
 pub fn capitalize_first(input: &str) -> String {
+    if input.is_empty() {
+        return String::new();
+    }
    let new  = input.split_at(1);
    new.0.to_uppercase() + &new.1.to_lowercase()
 }

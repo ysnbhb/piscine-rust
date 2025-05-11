@@ -1,6 +1,6 @@
-use std::ptr::null;
-
 use rand::Rng;
+
+#[derive(Debug, PartialEq)]
 
 pub enum Suit {
     Heart,
@@ -8,7 +8,7 @@ pub enum Suit {
     Spade,
     Club,
 }
-
+#[derive(Debug, PartialEq)]
 pub enum Rank {
     Ace,
     King,
@@ -49,10 +49,13 @@ impl Rank {
         }
     }
 }
-
+#[derive(Debug, PartialEq)]
 pub struct Card {
     pub suit: Suit,
     pub rank: Rank,
 }
 
-pub fn winner_card(card: &Card) -> bool {}
+pub fn winner_card(card: &Card) -> bool {
+    // *card::suit::Ace == Card::Suit::Ace
+    card.suit == crate::Suit::Spade && card.rank == crate::Rank::Ace
+}

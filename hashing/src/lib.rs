@@ -17,7 +17,7 @@ pub fn median(list: &[i32]) -> i32 {
     new_list.sort(); 
     println!("{:?}", new_list);
     if new_list.len() % 2 == 1 {
-        new_list[new_list.len() / 2 - 1]
+        new_list[new_list.len() / 2]
     } else {
         ((new_list[len / 2 - 1] as f32 + new_list[len / 2] as f32) / 2.0).round() as i32
 

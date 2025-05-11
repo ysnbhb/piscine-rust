@@ -8,9 +8,9 @@ pub fn median(list: &[i32]) -> i32 {
     let mut new_list = list.to_vec();
     new_list.sort();
     if new_list.len() % 2 == 1 {
-        (new_list[new_list.len() / 2 - 1] + new_list[new_list.len() / 2]) / 2
-    } else {
         new_list[new_list.len() / 2 - 1]
+    } else {
+        (new_list[new_list.len() / 2 - 1] + new_list[new_list.len() / 2]) / 2
     }
 }
 

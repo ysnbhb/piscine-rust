@@ -8,6 +8,7 @@ pub enum Suit {
     Spade,
     Club,
 }
+
 #[derive(Debug, PartialEq)]
 pub enum Rank {
     Ace,

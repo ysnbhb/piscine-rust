@@ -7,7 +7,11 @@ pub fn mean(list: &[i32]) -> f64 {
 pub fn median(list: &[i32]) -> i32 {
     let mut new_list = list.to_vec();
     new_list.sort();
-    new_list[new_list.len() / 2 -1]
+    if new_list.len() % 2 == 1 {
+        (new_list[new_list.len() / 2 - 1] + new_list[new_list.len() / 2]) / 2
+    } else {
+        new_list[new_list.len() / 2 - 1]
+    }
 }
 
 pub fn mode(list: &[i32]) -> i32 {

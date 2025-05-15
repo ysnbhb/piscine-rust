@@ -26,6 +26,7 @@ pub struct FlagsHandler {
 impl FlagsHandler {
     pub fn add_flag(&mut self, flag: Flag, func: Callback) {
         self.flags.insert(flag.short_hand, func);
+        self.flags.insert(flag.long_hand, func);
     }
 
     pub fn exec_func(&self, input: &str, argv: &[&str]) -> Result<String, String> {
@@ -44,13 +45,13 @@ impl FlagsHandler {
 }
 
 pub fn div(a: &str, b: &str) -> Result<String, ParseFloatError> {
-    let num1 = a.parse::<f32>()?;
-    let num2 = b.parse::<f32>()?;
+    let num1 = a.parse::<f64>()?;
+    let num2 = b.parse::<f64>()?;
     Ok((num1 / num2).to_string())
 }
 
 pub fn rem(a: &str, b: &str) -> Result<String, ParseFloatError> {
-    let num1 = a.parse::<f32>()?;
-    let num2 = b.parse::<f32>()?;
+    let num1 = a.parse::<f64>()?;
+    let num2 = b.parse::<f64>()?;
     Ok((num1 % num2).to_string())
 }

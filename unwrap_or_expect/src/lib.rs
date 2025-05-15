@@ -21,6 +21,6 @@ pub fn fetch_data(server: Result<&str, &str>, security_level: Security) -> Strin
             .map(String::from)
             .unwrap_or_else(|f| format!("Not found: {}", f))
     } else {
-        server.expect("ERROR: program stops").to_string()
+        server.expect_err("ERROR: program stops").to_string()
     }
 }

@@ -9,8 +9,8 @@ fn main() {
     // fetch_data(Err("ERROR CRITICAL"), Security::Unknown);
 
     // Panics with the message "ERROR: program stops"
-    fetch_data(Err("server.com"), Security::Message);
+    // fetch_data(Err("server.com"), Security::Message);
 
     // Panics with the message "malicious_server.com"
-    // fetch_data(Ok("malicious_server.com"), Security::UnexpectedUrl);
+    fetch_data(Ok("malicious_server.com"), Security::UnexpectedUrl);
 }

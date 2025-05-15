@@ -11,9 +11,5 @@ pub fn open_or_create<P: AsRef<Path>>(path: &P, content: &str) {
         .open(path).unwrap();
     let mut last_content  = String::new();
     let _ = file.read_to_string(&mut last_content);
-    for i in content.chars() {
-        last_content.push(i);
-
-    }
     file.write(last_content.as_bytes()).unwrap();
 }

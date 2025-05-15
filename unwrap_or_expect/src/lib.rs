@@ -13,7 +13,7 @@ pub fn fetch_data(server: Result<&str, &str>, security_level: Security) -> Strin
     if security_level == Message {
         return server.expect("ERROR: program stops").to_string();
     } else if security_level == Unknown {
-        return server.unwrap_or("").to_string();
+        return server.expect("").to_string();
     } else if security_level == Warning {
         return server.expect("WARNING: check the server").to_string();
     } else if security_level == NotFound {

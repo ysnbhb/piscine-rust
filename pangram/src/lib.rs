@@ -1,14 +1,13 @@
-use std::collections::HashMap;
+use std::collections::HashSet;
 
 pub fn is_pangram(s: &str) -> bool {
-    if s.trim().is_empty() {
-        return false;
-    }
-    let mut mp: HashMap<char, isize> = HashMap::new();
-    for i in s.to_ascii_lowercase().chars() {
-        if i <= 'a' && i >= 'z' {
-            mp.insert(i, 0);
+    let mut chars_seen: HashSet<char> = HashSet::new();
+
+    for c in s.to_ascii_lowercase().chars() {
+        if c >= 'a' && c <= 'z' {
+            chars_seen.insert(c);
         }
     }
-    mp.len() == 26
+
+    chars_seen.len() == 26
 }

@@ -1,8 +1,8 @@
 use std::collections::HashMap;
 
 pub fn is_pangram(s: &str) -> bool {
-    if s.is_empty() {
-        return true;
+    if s.trim().is_empty() {
+        return false;
     }
     for i in s.split_ascii_whitespace() {
         let mut res = false;

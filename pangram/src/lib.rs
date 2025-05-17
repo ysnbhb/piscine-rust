@@ -1,6 +1,9 @@
 use std::collections::HashMap;
 
 pub fn is_pangram(s: &str) -> bool {
+    if s.is_empty() {
+        return true;
+    }
     for i in s.split_ascii_whitespace() {
         let mut res = false;
         let mut mp: HashMap<char, bool> = HashMap::new();

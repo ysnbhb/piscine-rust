@@ -1,6 +1,3 @@
-use std::arch::x86_64::_mm_round_pd;
-
-use json::JsonValue;
 pub struct Food {
     pub name: String,
     pub calories: (String, String),

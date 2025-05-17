@@ -1,6 +1,6 @@
 pub fn score(s: &str) -> usize {
     let mut res: usize = 0;
-    for i in s.to_lowercase().chars() {
+    for i in s.to_uppercase().chars() {
         if ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T'].contains(&i) {
             res += 1;
         } else if ['D', 'G'].contains(&i) {

@@ -6,7 +6,7 @@ pub fn is_pangram(s: &str) -> bool {
     }
     let mut mp: HashMap<char, isize> = HashMap::new();
     for i in s.to_ascii_lowercase().chars() {
-        if i <= 'a' && i > 'z' {
+        if i <= 'a' && i >= 'z' {
             mp.insert(i, 0);
         }
     }

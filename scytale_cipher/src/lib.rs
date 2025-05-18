@@ -13,5 +13,5 @@ pub fn scytale_cipher(message: String, i: u32) -> String {
         }
     }
 
-    res[0..message.len()].to_string()
+    res[0..message.len()-1].to_string()
 }
